@@ -35,9 +35,9 @@ def game_button3():
     if player_choice == comp_choice:
         messagebox.showinfo("Информация", f"Вы выбрали одно и тоже. Итог - ничья")
     elif player_choice == "бумага" and comp_choice == "камень":
-        print("Бумага бьёт камень. Вы победили победил.")
+        messagebox.showinfo("Информация", f"Бумага бьёт камень. Вы победили победил.")
     elif player_choice == "бумага" and comp_choice == "ножницы":
-        print("Ножницы режут бумагу. Компьютер победил")
+        messagebox.showinfo("Информация", f"Ножницы режут бумагу. Вы победили.")
 
 root = tk.Tk()
 root.geometry("360x100")
