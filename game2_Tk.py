@@ -3,14 +3,17 @@ from tkinter import ttk
 from tkinter import messagebox
 import random
 
-comp_choice = random.randint(1, 3)
+comp_choice = ""
 
-if comp_choice == 1:
-    comp_choice = "камень"
-elif comp_choice == 2:
-    comp_choice = "ножницы"
-elif  comp_choice == 3:
-    comp_choice = "бумага"
+def computer_choice():
+    global comp_choice
+    choice = random.randint(1, 3)
+    if choice == 1:
+        comp_choice = "камень"
+    elif choice == 2:
+        comp_choice = "ножницы"
+    elif choice == 3:
+        comp_choice = "бумага"
 
 def game_button1():
     player_choice = "камень"
@@ -51,5 +54,8 @@ button2.place(x = 120, y = 0)
 
 button3 = ttk.Button(text="бумага", width=8, command=game_button3)
 button3.place(x = 240, y=0)
+
+button4 =  ttk.Button(text="играть", width=8, command=computer_choice)
+button4.place(x = 120, y = 30)
 
 root.mainloop()
