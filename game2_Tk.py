@@ -43,7 +43,7 @@ def game_button3():
         messagebox.showinfo("Информация", f"Ножницы режут бумагу. Вы победили.")
 
 root = tk.Tk()
-root.geometry("360x100")
+root.geometry("360x160")
 root.title("Камень, ножницы, бумага")
 
 button1 = ttk.Button(text="камень", width=8, command=game_button1)
@@ -55,7 +55,10 @@ button2.place(x = 120, y = 0)
 button3 = ttk.Button(text="бумага", width=8, command=game_button3)
 button3.place(x = 240, y=0)
 
-button4 =  ttk.Button(text="играть", width=8, command=computer_choice)
-button4.place(x = 120, y = 30)
+button4 =  ttk.Button(text="играть", width=30, command=computer_choice)
+button4.place(x = 26, y = 30)
+
+label1 = ttk.Label(text='Чтобы начать игру, нажмите на кнопку "играть"', font='Times 15')
+label1.pack(pady = 70)
 
 root.mainloop()
